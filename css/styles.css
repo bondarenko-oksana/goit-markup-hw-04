@@ -107,18 +107,19 @@ position: relative;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link:hover, 
 .address-link:focus {
     color: #404bbf;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .section-one {
     background-color: #2e2f42;
     padding: 188px 0;
     
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7), url(../images/office.jpg));
-    
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/office.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -189,10 +190,14 @@ position: relative;
 }
 
 .st-icons {
-        border: 1px solid #8e8f99;
-        border-radius: 4px;
-        padding: 24px 100px;
-        background-color: #f4f4fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    margin-bottom: 8px;
 }
 
 .section-two-list .heading-three .st-icons {
@@ -230,9 +235,13 @@ position: relative;
     background-color: #FFFFFF;
     width: calc((100% - 72px) / 4);
     border-radius: 0 0 4px 4px;
+
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .third-sec-heading-text {
-padding: 32px 0;
+     padding: 32px 0;
 
 }
 
@@ -247,15 +256,35 @@ padding: 32px 0;
 
 .social-icons-list {
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 24px;
-
 }
-.so-icon {
+
+.social-icons-item {
+width: 40px;
+height: 40px;
+}
+
+.social-icons-link {
+width: 100%;
+height: 100%;
 background-color: #4d5ae5;
-border-radius: 50%;
-fill: #FFFFFF;
+border-radius: 50%; 
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+background-color: #404bbf;
+}
+
+.so-icon {
+    fill: #f4f4fd;
 }
 .section-four {
     padding: 120px 0;
@@ -270,9 +299,48 @@ fill: #FFFFFF;
     flex-wrap: wrap;
     row-gap: 48px;
     column-gap: 24px;
+    
+    
 }
 .portfolio-list-services {
     width: calc((100% - 48px) / 3);
+    
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list-services:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+   
+}
+
+.sec-four-image-par {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.portfolio-list-services:hover .hidden-par {
+transform: translateY(0%);
+}
+
+.hidden-par {
+    position: absolute;
+    top: 0;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    
 }
 
 .section-four-heading-text {
@@ -290,13 +358,35 @@ fill: #FFFFFF;
     padding: 100px 0;
 }
 
+.container-footer {
+    display: flex;
+    align-items: baseline;
+}
+
+.bottom-logo-par {
+    margin-right: 120px;
+}
+
 .footer-logo {
     display: inline-block;
     margin-bottom: 16px;
 }
 .logo-studio-footer {
     color: #f4f4fd;
+}
 
+.footer-so-text{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+
+    margin-bottom: 16px;
+}
+.social-icons-footer {
+    display: flex;
+    gap: 16px;
 }
 .footer-text {
     line-height: 1.5;
@@ -304,7 +394,22 @@ fill: #FFFFFF;
     letter-spacing: 0.02em;
     max-width: 264px;
 }
+.footer-icons-link {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-icons-link:hover,
+.footer-icons-link:focus {
+    background-color: #31d0aa;
+}
 .visually-hidden {
     position: absolute;
     width: 1px;
